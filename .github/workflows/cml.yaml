@@ -2,18 +2,18 @@ name: model-wine-quality
 on: [push]
 jobs:
   run:
-     runs-on: [ubuntu-latest]
-     container: docker://dvcorg/cml-py3:latest
+     runs-on: [ubuntu-latest]                                # On which server program to run(windows, macos also supported)
+     container: docker://dvcorg/cml-py3:latest               # Docker container from CML Project 
      steps:
-        - uses: actions/checkout@v2
+        - uses: actions/checkout@v2                          # checkout@v2 is a repository, which consists of dependencies to support CML
         - name: cml_run
           env:
-              repo_token: ${{ secrets.GITHUB_TOKEN }}
-          run: |
-              pip install -r requirements.txt
+              repo_token: ${{ secrets.GITHUB_TOKEN }}        # Authentication(default)
+          run: |                                             # Requirement file, Program file and Output to display are mentioned here.
+              pip install -r requirements.txt               
               python train.py
               
-              echo "## Model metrics" > report.md
+              echo "## Model metrics" > report.md        
               cat metrics.txt >> report.md
               
               echo "## Data Viz" >> report.md
