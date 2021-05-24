@@ -1,2 +1,8 @@
 # Wine quality prediction
-Modelling a Kaggle dataset of [red wine properties and quality ratings](https://www.kaggle.com/uciml/red-wine-quality-cortez-et-al-2009). 
+Continuous Machine Learning (CML) is an open-source library for implementing continuous integration & delivery (CI/CD) in machine learning projects. Use it to automate parts of your development workflow, including model training and evaluation, comparing ML experiments across your project history, and monitoring changing datasets.
+Above repostitory is built using Docker container
+
+
+
+References
+https://cml.dev/#use-cases   - website link
